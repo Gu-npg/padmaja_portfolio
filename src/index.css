@@ -1,0 +1,111 @@
+/* ---------- Variables & Base ---------- */
+:root{
+  --bg: #0b0f19;
+  --card: #121829;
+  --text: #e6e9f4;
+  --muted: #9aa4bf;
+  --brand: #6aa7ff;
+  --accent: #19dac6;
+  --border: #20263a;
+  --radius: 14px;
+  --shadow: 0 8px 30px rgba(2,6,23,0.6);
+  --container: min(1100px, 94%);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+.container{width:var(--container);margin:0 auto;padding:0 12px}
+a{color:inherit;text-decoration:none}
+
+/* ---------- Header / Nav ---------- */
+.navbar{
+  position:sticky;top:0;background:rgba(11,15,25,0.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);z-index:90;
+}
+.nav-content{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700}
+.brand .dot{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--accent))}
+
+/* nav links */
+.nav-links{display:flex;align-items:center;gap:12px}
+.nav-links a{color:var(--muted);font-weight:600;padding:6px 8px;border-radius:8px;transition:color .2s, background .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-links a.active{color:var(--text);background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent)}
+
+/* buttons in navbar */
+.nav-actions{display:flex;gap:10px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:var(--card);border:1px solid var(--border);color:var(--text);cursor:pointer}
+.btn.primary{background:linear-gradient(135deg,var(--brand),var(--accent));border:none;color:#08111a;font-weight:700;box-shadow:var(--shadow)}
+.btn.small{padding:6px 10px;font-size:.92rem}
+
+/* ---------- Hero ---------- */
+.hero{padding:48px 0 32px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+.tag{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);color:var(--muted);font-weight:600}
+.hero h1{font-size:clamp(1.9rem,4.5vw,2.6rem);margin:.6rem 0}
+.hero p{color:var(--muted);font-size:1.02rem}
+
+/* hero card */
+.hero-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:12px;box-shadow:var(--shadow)}
+.hero-card img{width:100%;height:280px;object-fit:contain;border-radius:10px}
+
+/* ---------- Skills ---------- */
+.section-title{margin-bottom:8px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.skill-card{background:var(--card);border:1px solid var(--border);padding:14px;border-radius:12px;box-shadow:var(--shadow);transition:transform .18s}
+.skill-card:hover{transform:translateY(-6px)}
+.skill-head{display:flex;justify-content:space-between;align-items:center}
+.pill{padding:4px 8px;border-radius:999px;border:1px solid var(--border);color:var(--muted);font-weight:600;font-size:.86rem;margin-left:8px}
+.bar{height:10px;background:#22263a;border-radius:999px;overflow:hidden;margin-top:10px}
+.bar>span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--brand),var(--accent));transition:width 900ms cubic-bezier(.2,.9,.3,1)}
+
+/* ---------- Timeline / Experience ---------- */
+.timeline{display:grid;gap:14px}
+.t-item{display:flex;gap:12px;align-items:start}
+.t-card{background:var(--card);border:1px solid var(--border);padding:14px;border-radius:12px;box-shadow:var(--shadow)}
+
+/* ---------- Projects ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer;transition:transform .18s, box-shadow .18s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(2,6,23,0.6)}
+.card img{width:100%;height:180px;object-fit:cover}
+.card .p{padding:12px}
+
+/* ---------- list (certs / education) ---------- */
+.list{display:grid;gap:10px}
+.list .item{background:var(--card);border:1px solid var(--border);padding:10px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;box-shadow:var(--shadow)}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+input,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text);resize:vertical}
+
+/* ---------- Footer ---------- */
+footer{padding:28px 0;border-top:1px solid var(--border);color:var(--muted);text-align:center}
+
+/* ---------- Modal (simple) ---------- */
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:200}
+.modal{background:var(--card);border-radius:12px;padding:18px;max-width:800px;width:92%;border:1px solid var(--border);box-shadow:var(--shadow)}
+.modal .modal-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:8px;border-bottom:1px solid var(--border)}
+
+/* ---------- Animation classes ---------- */
+.animate{opacity:0;transform:scale(.995);transition:opacity .55s ease, transform .55s ease}
+.animate.visible{opacity:1;transform:scale(1)}
+
+/* ---------- Responsive ---------- */
+@media(min-width:1400px){
+  .hero-card img{height:340px}
+}
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .t-item{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .nav-links{display:none} /* simple mobile; you can add a menu icon later */
+  .nav-content{gap:8px}
+  .hero-card img{height:220px}
+}
