@@ -11,6 +11,8 @@ export default function Hero() {
             I am <strong>Padmaja Gurram</strong>, a results-driven analyst with <strong>3+ years</strong> experience designing dashboards,
             optimizing models with <strong>DAX</strong> and managing data with <strong>SQL</strong> & <strong>Azure Databricks</strong>.
           </p>
+          <p>Extensive experience in <strong>DAX, SQL, PySpark and Python</strong>. Demonstrated ability to transform raw
+             data into actionable insights to support effective decision-making.</p>
 
           <div style={{ marginTop: 18, display: "flex", gap: 12 }}>
             <a className="btn primary" href="#projects">See My Work</a>

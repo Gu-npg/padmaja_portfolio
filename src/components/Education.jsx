@@ -7,7 +7,7 @@ export default function Education() {
       <div className="list">
         <div className="item">
           <div><strong>B.Tech — Computer Science & Engineering</strong>, JNTU Kakinada</div>
-          <div className="pill">Graduate</div>
+          <div className="pill">Graduate(70%)</div>
         </div>
       </div>
     </section>
